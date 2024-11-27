@@ -1,0 +1,19 @@
+/* Sequelize não entende o módulo ES, tem que escrever no módulo commonJS.*/
+/*Aqui foram mapeadas todas as pastas para o sequelize funcionar.*/
+
+import { resolve } from 'node:path';
+//const { resolve } = require('node:path');
+
+//módulo commonJS
+/*module.exports = {
+    config: resolve(__dirname, 'src', 'config', 'database.js'),
+    'models-path': resolve(__dirname, 'src', 'app', 'models'),
+    'migrations-path': resolve(__dirname, 'src', 'database', 'migrations'),
+}*/
+
+// Módulo ES
+export default {
+    config: resolve(__dirname, 'src', 'config', 'database.js'),
+    'models-path': resolve(__dirname, 'src', 'app', 'models'),
+    'migrations-path': resolve(__dirname, 'src', 'database', 'migrations'),
+}
