@@ -1,53 +1,53 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const OrderSchema = new mongoose.Schema(
-  {
-    user: {
-      id: {
-        type: String,
-        required: true,
-      },
-      name: {
-        type: String,
-        required: true,
-      },
-    },
-    products: [
-      {
-        id: {
-          type: Number,
-          requared: true,
-        },
-        name: {
-          type: String,
-          required: true,
-        },
-        price: {
-          type: Number,
-          requared: true,
-        },
-        category: {
-          type: String,
-          required: true,
-        },
-        url: {
-          type: String,
-          required: true,
-        },
-        quantity: {
-          type: String,
-          required: true,
-        },
-      },
-    ],
-    status: {
-      type: String,
-      required: true,
-    },
-  },
-  {
-    timestamps: true,
-  }
+	{
+		user: {
+			id: {
+				type: String,
+				required: true,
+			},
+			name: {
+				type: String,
+				required: true,
+			},
+		},
+		products: [
+			{
+				id: {
+					type: Number,
+					requared: true,
+				},
+				name: {
+					type: String,
+					required: true,
+				},
+				price: {
+					type: Number,
+					requared: true,
+				},
+				category: {
+					type: String,
+					required: true,
+				},
+				url: {
+					type: String,
+					required: true,
+				},
+				quantity: {
+					type: String,
+					required: true,
+				},
+			},
+		],
+		status: {
+			type: String,
+			required: true,
+		},
+	},
+	{
+		timestamps: true,
+	},
 );
 
-export default mongoose.model("Order", OrderSchema);
+export default mongoose.model('Order', OrderSchema);

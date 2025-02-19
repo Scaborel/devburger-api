@@ -1,3 +1,5 @@
+//Primeiro arquivo a ser criado, para configurar o banco de dados.
+
 /*export const dialect = 'postgres';
 export const host = 'localhost';
 export const port = 5432;
@@ -12,17 +14,16 @@ export const define = {
 
 /*Configuração do banco de dados.*/
 
- module.exports = {
-    dialect: 'postgres',
-    host: 'localhost',
-    port: 5432,
-    username: 'postgres',
-    password: 'postgres',
-    database: 'devburger',
-    define: {
-        timestamps: true, //registra quando a coluna foi criada (created_at) e/ou atualizada (updated_at).
-        underscored: true, //nome das colunas em "snake_case", tudo minusculo separado por underline.
-        underscoredAll: true,
-    },
+module.exports = {
+	dialect: "postgres",
+	host: "localhost",
+	port: 5432,
+	username: "postgres",
+	password: "postgres",
+	database: "devburger",
+	define: {
+		timestamps: true, //registra quando a coluna foi criada (created_at) e/ou atualizada (updated_at).
+		underscored: true, //nome das colunas em "snake_case", tudo minusculo separado por underline.
+		underscoredAll: true,
+	},
 };
- 
