@@ -2,7 +2,7 @@
 
 import { where } from 'sequelize';
 import * as Yup from 'yup';
-import Category from '../models/Category';
+import Category from '../../models/Category';
 import User from '../models/User';
 import Product from './models/product';
 
