@@ -23,8 +23,8 @@ class Database {
 		models
 			.map((model) => model.init(this.connection))
 			.map(
+				//Era assim: (model) => model.associate && model.associate(this.connection.models).
 				//O Biome sugeriu que corrigisse essa sintaxe para a que está abaixo.
-				//(model) => model.associate && model.associate(this.connection.models),
 				(model) => model.associate?.(this.connection.models),
 			);
 	}
