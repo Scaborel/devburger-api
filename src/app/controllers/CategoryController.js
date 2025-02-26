@@ -82,6 +82,7 @@ class CategoryController {
 				},
 			});
 
+			//) id !== +id: 0 +id é prar transformar o id em um número, pois só id é uma string que vem do request.params.
 			if (categoryNameExists && categoryNameExists.id !== +id) {
 				return response.status(400).json({ error: 'Category already exists' });
 			}

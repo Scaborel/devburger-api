@@ -75,6 +75,7 @@ class ProductController {
 		if (request.file) {
 			path = request.file.filename;
 		}
+		//Essa variavel path é para verificar se o arquivo foi enviado, se sim, ele vai atualizar a imagem do produto. E é também para deixar opcional a atualização da imagem do produto e corresponde a sintaxe     const {filename:path} = request.file.
 
 		const { name, price, category_id, offer } = request.body;
 

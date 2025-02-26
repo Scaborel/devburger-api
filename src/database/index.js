@@ -6,8 +6,8 @@ import Sequelize from 'sequelize';
 
 import configDatabase from '../config/database.js';
 
+import Category from '../app/models/Category';
 import User from '../app/models/User';
-import Category from '../app/models/category';
 import Product from '../app/models/product';
 
 const models = [User, Product, Category];

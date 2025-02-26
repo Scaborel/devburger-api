@@ -27,8 +27,10 @@ class OrderController {
 		const { products } = request.body;
 
 		const productsIds = products.map((product) => product.id);
+		//Um array de id's de produtos que o usuário quer comprar.
 
 		const findProducts = await Product.findAll({
+			//Aqui ele vai buscar todos os produtos que estão no array de id's.
 			where: {
 				id: productsIds,
 			},
@@ -41,6 +43,7 @@ class OrderController {
 			],
 		});
 
+		//Essa parte é para pegar a quantidade de produtos que o usuário quer comprar.
 		const formattedProducts = findProducts.map((product) => {
 			const productIndex = products.findIndex((item) => item.id === product.id);
 

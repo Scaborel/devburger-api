@@ -1,3 +1,5 @@
+//Estrutura da tabela de pedidos.
+
 import mongoose from 'mongoose';
 
 const OrderSchema = new mongoose.Schema(
